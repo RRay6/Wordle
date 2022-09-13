@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.view.View
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         val word = FourLetterWordList.getRandomFourLetterWord();
         var currentGuess = 1;
         var restart = 0;
+        var incorrect = 1;
 
         val a1 = findViewById<TextView>(R.id.firstWordLetterOne);
         val a2 = findViewById<TextView>(R.id.firstWordLetterTwo);
@@ -42,6 +44,13 @@ class MainActivity : AppCompatActivity() {
         val c4 = findViewById<TextView>(R.id.thirdWordLetterFour);
 
         val c = arrayOf(c1, c2, c3, c4);
+
+        val d1 = findViewById<TextView>(R.id.correctWordLetterOne);
+        val d2 = findViewById<TextView>(R.id.correctWordLetterTwo);
+        val d3 = findViewById<TextView>(R.id.correctWordLetterThree);
+        val d4 = findViewById<TextView>(R.id.correctWordLetterFour);
+
+        val d = arrayOf(d1, d2, d3, d4);
 
         val editText = findViewById<EditText>(R.id.editText);
 
@@ -69,6 +78,7 @@ class MainActivity : AppCompatActivity() {
 
                     if (guess.lowercase() == word.lowercase()) {
                         currentGuess = 4;
+                        incorrect = 0;
                     }
 
                     if (guess[i].lowercase() == word[i].lowercase()) {
@@ -87,6 +97,7 @@ class MainActivity : AppCompatActivity() {
 
                     if (guess.lowercase() == word.lowercase()) {
                         currentGuess = 4;
+                        incorrect = 0;
                     }
 
                     if (guess[i].lowercase() == word[i].lowercase()) {
@@ -101,6 +112,10 @@ class MainActivity : AppCompatActivity() {
                 for (i in 0..3) {
 
                     c[i].setText("" + guess[i].uppercase());
+
+                    if (guess.lowercase() == word.lowercase()) {
+                        incorrect = 0;
+                    }
 
                     if (guess[i].lowercase() == word[i].lowercase()) {
                         c[i].setBackgroundColor(Color.parseColor("#538d4e"));
@@ -123,11 +138,14 @@ class MainActivity : AppCompatActivity() {
                     b[i].setBackgroundColor(Color.parseColor("#3a3a3c"));
                     c[i].setText("");
                     c[i].setBackgroundColor(Color.parseColor("#3a3a3c"));
+                    d[i].setText("");
+                    d[i].visibility = View.INVISIBLE;
                 }
 
                 editText.setHint("Enter a Four Letter Word");
                 editText.isEnabled = true;
                 button.setText("Guess!");
+                incorrect = 1;
 
                 restart = 0;
             }
@@ -139,6 +157,13 @@ class MainActivity : AppCompatActivity() {
                 editText.isEnabled = false;
 
                 restart = 1;
+            }
+
+            if (currentGuess == 4 && incorrect == 1) {
+                for (i in 0..3) {
+                    d[i].visibility = View.VISIBLE;
+                    d[i].setText(""+word[i]);
+                }
             }
 
             editText.setText("");
