@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121213"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/firstWordLetterOne"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="165dp"
+        android:background="#3a3a3c"
+        android:gravity="center"
+        android:text=""
+        android:textSize="60sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/firstWordLetterTwo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/firstWordLetterTwo"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="165dp"
+        android:background="#3a3a3c"
+        android:gravity="center"
+        android:text=""
+        android:textSize="60sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/firstWordLetterThree"
+        app:layout_constraintStart_toEndOf="@+id/firstWordLetterOne"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/firstWordLetterThree"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="165dp"
+        android:background="#3a3a3c"
+        android:gravity="center"
+        android:text=""
+        android:textSize="60sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/firstWordLetterFour"
+        app:layout_constraintStart_toEndOf="@+id/firstWordLetterTwo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/firstWordLetterFour"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="165dp"
+        android:background="#3a3a3c"
+        android:gravity="center"
+        android:text=""
+        android:textSize="60sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/firstWordLetterThree"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/secondWordLetterOne"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="30dp"
+        android:background="#3a3a3c"
+        android:gravity="center"
+        android:text=""
+        android:textSize="60sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/secondWordLetterTwo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstWordLetterOne" />
+
+    <TextView
+        android:id="@+id/secondWordLetterTwo"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="30dp"
+        android:background="#3a3a3c"
+        android:gravity="center"
+        android:text=""
+        android:textSize="60sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/secondWordLetterThree"
+        app:layout_constraintStart_toEndOf="@+id/secondWordLetterOne"
+        app:layout_constraintTop_toBottomOf="@+id/firstWordLetterTwo" />
+
+    <TextView
+        android:id="@+id/secondWordLetterThree"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="30dp"
+        android:background="#3a3a3c"
+        android:gravity="center"
+        android:text=""
+        android:textSize="60sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/secondWordLetterFour"
+        app:layout_constraintStart_toEndOf="@+id/secondWordLetterTwo"
+        app:layout_constraintTop_toBottomOf="@+id/firstWordLetterThree" />
+
+    <TextView
+        android:id="@+id/secondWordLetterFour"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="30dp"
+        android:background="#3a3a3c"
+        android:gravity="center"
+        android:text=""
+        android:textSize="60sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/secondWordLetterThree"
+        app:layout_constraintTop_toBottomOf="@+id/firstWordLetterFour" />
+
+    <TextView
+        android:id="@+id/thirdWordLetterOne"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="30dp"
+        android:background="#3a3a3c"
+        android:gravity="center"
+        android:text=""
+        android:textSize="60sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/thirdWordLetterTwo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondWordLetterOne" />
+
+    <TextView
+        android:id="@+id/thirdWordLetterTwo"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="30dp"
+        android:background="#3a3a3c"
+        android:gravity="center"
+        android:text=""
+        android:textSize="60sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/thirdWordLetterThree"
+        app:layout_constraintStart_toEndOf="@+id/thirdWordLetterOne"
+        app:layout_constraintTop_toBottomOf="@+id/secondWordLetterTwo" />
+
+    <TextView
+        android:id="@+id/thirdWordLetterThree"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="30dp"
+        android:background="#3a3a3c"
+        android:gravity="center"
+        android:text=""
+        android:textSize="60sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/thirdWordLetterFour"
+        app:layout_constraintStart_toEndOf="@+id/thirdWordLetterTwo"
+        app:layout_constraintTop_toBottomOf="@+id/secondWordLetterThree" />
+
+    <TextView
+        android:id="@+id/thirdWordLetterFour"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="30dp"
+        android:background="#3a3a3c"
+        android:gravity="center"
+        android:text=""
+        android:textSize="60sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/thirdWordLetterThree"
+        app:layout_constraintTop_toBottomOf="@+id/secondWordLetterFour" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="230dp"
+        android:layout_height="80dp"
+        android:hint="Enter a Four Letter Word"
+        android:textSize="20dp"
+        android:maxLength="4"
+        android:layout_marginTop="550dp"
+        android:textColorHint="@color/white"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="155dp"
+        android:layout_height="80dp"
+        android:text="Guess!"
+        android:textSize="20dp"
+        android:layout_marginTop="550dp"
+        android:backgroundTint="#818384"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WORDLE"
+        android:textSize="80dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_marginTop="22dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
