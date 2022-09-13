@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        val word = FourLetterWordList.getRandomFourLetterWord();
+        var word = FourLetterWordList.getRandomFourLetterWord();
         var currentGuess = 1;
         var restart = 0;
         var incorrect = 1;
@@ -146,6 +146,7 @@ class MainActivity : AppCompatActivity() {
                 editText.isEnabled = true;
                 button.setText("Guess!");
                 incorrect = 1;
+                word = FourLetterWordList.getRandomFourLetterWord();
 
                 restart = 0;
             }
